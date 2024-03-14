@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+}
+
+.bg{
+  background-size: cover;
+ 
+ 
+}
+
+.texts{
+  -webkit-text-stroke: 1px rgb(92, 90, 90);
+}
