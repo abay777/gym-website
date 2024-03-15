@@ -1,14 +1,15 @@
 
 import './App.css'
-import { Descibe, Navbar, TopBanner } from './components'
+import { Descibe, Form, Navbar, TopBanner } from './components'
 
 function App() {
   
   return (
     <>
-    <Navbar/>
+      <Navbar/>
       <TopBanner/>
       <Descibe />
+      <Form/>
     </>
   )
 }

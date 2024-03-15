@@ -17,3 +17,18 @@ body{
 .texts{
   -webkit-text-stroke: 1px rgb(92, 90, 90);
 }
+
+.about:hover ~ .i{
+ display: grid;
+}
+
+.i:hover{
+  display: grid;
+
+}
+
+.goldGradient{
+  background-color: #eab861;
+  background-image: linear-gradient(135deg, #eab861 7%, #d5c38d 45%, #c7c0c0 87%);
+
+}
