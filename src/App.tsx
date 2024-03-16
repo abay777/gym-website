@@ -1,6 +1,6 @@
 
 import './App.css'
-import { Descibe, Form, Navbar, TopBanner } from './components'
+import { Descibe, Footer, Form, Navbar, TopBanner } from './components'
 
 function App() {
   
@@ -10,6 +10,7 @@ function App() {
       <TopBanner/>
       <Descibe />
       <Form/>
+      <Footer/>
     </>
   )
 }
