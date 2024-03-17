@@ -1,13 +1,18 @@
 import React from 'react'
 import { ImQuotesLeft } from 'react-icons/im'
+import { Reveal } from './framer reveal/Reveal'
 
 export const Form:React.FC = () => {
   return (
    <>
      <section className='bg-white pl-5 md:pl-10 py-14 flex flex-col md:flex-row'>
         <div className='w-full md:w-[40%]'>
-            <h1 className='font-extrabold text-3xl tracking-tighter '>SCHEDULE A VISIT</h1>
-            <p className='font-light w-[90%] text-balance py-5'>Take a free 30-minute tour of either of our locations to help you decide if Klipsan is the right gym for you. You’ll have the opportunity to try equipment, observe classes, and get direct answers to all of your questions.</p>
+            <Reveal>
+                <h1 className='font-extrabold text-3xl tracking-tighter '>SCHEDULE A VISIT</h1>
+            </Reveal>
+            <Reveal>
+                <p className='font-light w-[90%] text-balance py-5'>Take a free 30-minute tour of either of our locations to help you decide if Klipsan is the right gym for you. You’ll have the opportunity to try equipment, observe classes, and get direct answers to all of your questions.</p>
+            </Reveal> 
         </div>
         <form action="" className='px-0 md:px-10 py-10 md:py-0 w-full md:w-[60%]' >
             <div>Name<span className='text-gray-600 '>(required)</span></div>
@@ -40,12 +45,16 @@ export const Form:React.FC = () => {
     </section>
     <div className='h-max goldGradient w-full text-center flex-col justify-center items-center py-14 md:py-24'>
         <div className='flex-col justify-center items-center text-center'>
+        <Reveal>
             <ImQuotesLeft size={40} color='white' className=' mx-auto '/>
+        </Reveal> 
+        <Reveal>
             <p className='font-extrabold md:text-center text-pretty tracking-tight md:text-5xl text-3xl w-full text-white md:pt-14 pt-8  leading-2 md:px-36 px-9'>KLIPSAN FITNESS WAS CENTRAL IN HELPING ME GAIN THE STAMINA FOR MY RECENT MARATHON.</p>
+        </Reveal>
+        <Reveal>
             <p className='mx-auto tracking-tight text-white md:pt-14 pt-8'>-Alejandro Jimenez</p>
-
+        </Reveal>
         </div>
-     
     </div>
    </>
   )
