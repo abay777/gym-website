@@ -5,29 +5,36 @@ import { GrCart } from 'react-icons/gr'
 import { IoMdClose } from 'react-icons/io'
 import { MdOpacity } from 'react-icons/md'
 
-export const Navbar:React.FC = () => {
+interface props{
+    text:string;
+    bg:string;
+}
+
+
+
+export const Navbar:React.FC<props> = ({text,bg}) => {
      const [burger,setBurger] = useState<boolean>(false)
      const [about, setAbout] = useState<boolean>(false)
       const  viewRef = useRef<HTMLDivElement>(null)
      const isInView =useInView(viewRef)
-     console.log(isInView);
+     console.log(bg)
      
 
        
      
   return (
     <>
-    <motion.nav className='text-[#1470af]  z-50'  ref={viewRef}
+    <motion.nav className={`text-[${text}]  z-50'`}  ref={viewRef}
     initial={{translateY:100}}
     whileInView={{ translateY:0 }}
     viewport={{once:true}}
     transition={{duration:.5}}>
-        <section className={isInView?`hidden z-20 fixed top-0 right-0 left-0 md:flex  items-center justify-between px-4 py-2 bg-[#4c858200]`:' hidden py-2 bg-black z-10 md:flex items-center justify-between px-4 fixed top-0 left-0 right-0'}>
+        <section className={isInView?`hidden z-20 fixed top-0 right-0 left-0 md:flex  items-center justify-between px-4 py-2 bg-[#4c858200]`:`bg-${bg}  hidden py-2  z-10 md:flex items-center justify-between px-4 fixed top-0 left-0 right-0`}>
             <div className='text-3xl font-bold pl-5 '>Gmyic </div>
             <div className='flex  items-center gap-10 lg:gap-[13rem]  '>
                 <ul className='flex justify-center items-center gap-7 font-semibold '>
                     <li className='relative about'>About</li>
-                    <div className='bg-black absolute top-7 -translate-x-10 text-start pl-5  hidden py-3 w-[17rem] capitalize i'>
+                    <div className='bg-black text-white absolute top-9 -translate-x-10 text-start pl-5  hidden py-3 w-[17rem] capitalize i'>
                         <span>instructors</span>
                         <span> Classes</span>
                         <span>Pricing</span>
@@ -105,4 +112,9 @@ export const Navbar:React.FC = () => {
 
     </>
   )
+}
+
+Navbar.defaultProps = {
+    text:'#1470af',
+    bg:'green'
 }
