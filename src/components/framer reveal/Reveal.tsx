@@ -26,6 +26,7 @@ export const Reveal:React.FC <props> = ({children}) => {
     whileInView='animate'
     viewport={{once:true}}
     transition={{delay:.8}}
+    className='w-full'
     >
         <div>
          {children}

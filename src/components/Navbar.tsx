@@ -4,7 +4,7 @@ import { FaFacebook, FaGripLines, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { GrCart } from 'react-icons/gr'
 import { IoMdClose } from 'react-icons/io'
 import { MdOpacity } from 'react-icons/md'
-
+import { Link } from 'react-router-dom'
 interface props{
     text:string;
     bg:string;
@@ -26,11 +26,11 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
     <>
     <motion.nav className={`text-[${text}]  z-50'`}  ref={viewRef}
     initial={{translateY:100}}
-    whileInView={{ translateY:0 }}
+    animate={{ translateY:0 }}
     viewport={{once:true}}
     transition={{duration:.5}}>
         <section className={isInView?`hidden z-20 fixed top-0 right-0 left-0 md:flex  items-center justify-between px-4 py-2 bg-[#4c858200]`:`bg-${bg}  hidden py-2  z-10 md:flex items-center justify-between px-4 fixed top-0 left-0 right-0`}>
-            <div className='text-3xl font-bold pl-5 '>Gmyic </div>
+            <div className='text-3xl font-bold pl-5 '><Link to={'/'}>Gmyic</Link>  </div>
             <div className='flex  items-center gap-10 lg:gap-[13rem]  '>
                 <ul className='flex justify-center items-center gap-7 font-semibold '>
                     <li className='relative about'>About</li>
@@ -39,8 +39,12 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
                         <span> Classes</span>
                         <span>Pricing</span>
                     </div>
+                    <Link to={'/Schedule'}>
                     <li>Schedule</li>
-                    <li>Contact</li>
+                    </Link>
+                    <Link to={'/Contact'}>
+                        <li>Contact</li>
+                    </Link>
                     <li>Store</li>
                 </ul>
                
@@ -58,8 +62,8 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
                 </div>
             </div>
         </section>
-        <section className={isInView?'flex md:hidden items-center py-2 justify-between px-4 fixed top-0 left-0 right-0 z-40':'flex md:hidden bg-black z-40 py-2 items-center  justify-between px-4 fixed top-0 left-0 right-0'}>
-            <div className='text-3xl font-bold pl-5 flex justify-between'>Gmyic 
+        <section className={isInView?'flex md:hidden items-center py-2 justify-between px-4 fixed top-0 left-0 right-0 z-40':`flex md:hidden bg-${bg} z-40 py-2 items-center  justify-between px-4 fixed top-0 left-0 right-0`}>
+            <div className='text-3xl font-bold pl-5 flex justify-between'><Link to={'/'}>Gmyic</Link>
             </div>
             <div className='flex gap-[5rem]'>
             <div className='flex items-center gap-3'>
@@ -79,9 +83,9 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
             whileInView={{opacity:1, translateX:0 }}
             transition={{duration:.05}}>
     
-                <ul className='flex-col  font-semibold text-4xl text-black'>
+                <ul className={ `flex-col  font-semibold text-4xl text-[${text}]`}>
                     <li className='py-3 pl-14  '>About <span className='font-extralight' onClick={()=>setAbout(!about)}> &gt;</span></li>
-                    <li className='py-3 pl-14 '>Schedule</li>
+                   <Link to={'/schedule'}><li className='py-3 pl-14 '>Schedule</li></Link>
                     <li className='py-3 pl-14 '>Contact</li>
                     <li className='py-3 pl-14 '>Store</li>
                     <motion.div className={about?`bg-[#ffffff] text-black' fixed top-0  left-0 right-0 bottom-0 flex-col flex pt-[3rem] tracking-wider items-start`:`hidden`}
