@@ -5,4 +5,6 @@ import { Form } from "./Form";
 import { Footer } from "./Footer";
 import { Contact } from "./Contact";
 import { Schedules } from "./Schedules";
-export {Navbar , Footer ,TopBanner, Descibe , Form, Contact, Schedules}
+import { Store } from "./Store";
+
+export {Navbar , Footer ,TopBanner, Descibe , Form, Contact, Schedules , Store}
