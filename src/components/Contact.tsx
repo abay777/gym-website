@@ -7,7 +7,7 @@ export const Contact:React.FC = () => {
     <>
         <Navbar text='#000' bg={'white'}/>
         <section className='mt-14 py-4'>
-            <article className='flex flex-col md:flex-row  pl-7 md:pl-10 gap-20 md:gap-40 items-start '  >
+            <article className='flex flex-col lg:flex-row  pl-7 md:pl-10 gap-20 md:gap-40 items-start '  >
                 <div className='flex flex-col justify-center gap-10'>
                     <div className='flex flex-col justify-center gap-8'>
                         <Reveal>
@@ -48,7 +48,7 @@ export const Contact:React.FC = () => {
                 </Reveal>
             </article>
             <hr className='h-[.15rem] bg-black mt-14 mx-auto w-10/12' />
-            <article className='flex flex-col md:flex-row  pl-7 md:pl-10 gap-20 md:gap-40 items-start mt-20'  >
+            <article className='flex flex-col lg:flex-row  pl-7 md:pl-10 gap-20 md:gap-40 items-start mt-20'  >
                 <div className='flex flex-col justify-center gap-10'>
                     <div className='flex flex-col justify-center gap-8'>
                         <Reveal>
