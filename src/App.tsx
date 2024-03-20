@@ -10,7 +10,7 @@ function App() {
       <Navbar text={'#1470af'} bg={'black'}/>
       <TopBanner/>
       <Descibe />
-      <Form/>
+      <Form />
       <LastBanner/>
       <Footer/>
     </>

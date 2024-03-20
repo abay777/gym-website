@@ -1,11 +1,17 @@
+import { QuotesBanner } from './QuotesBanner';
 import React from 'react'
-import { ImQuotesLeft } from 'react-icons/im'
 import { Reveal } from './framer reveal/Reveal'
 
-export const Form:React.FC = () => {
+
+interface props {
+    bg:string;
+    text:string;
+}
+
+export const Form:React.FC<props> = ({bg,text}) => {
   return (
    <>
-     <section className='bg-white pl-5 md:pl-10 py-14 flex flex-col md:flex-row'>
+     <section className={`bg-${bg} text-[${text}] pl-5 md:pl-10 py-14 flex flex-col md:flex-row`}>
         <div className='w-full md:w-[40%]'>
             <Reveal>
                 <h1 className='font-extrabold text-3xl tracking-tighter '>SCHEDULE A VISIT</h1>
@@ -35,27 +41,16 @@ export const Form:React.FC = () => {
             <input type="date"  className='py-2 px-5 w-[12rem] border-2 border-gray-500 block' name='date' id='date' />
            </article>
            <button className='mt-5 border-2 border-black py-3 px-7 rounded-3xl hover:bg-black hover:text-white'>submit</button>
-
-            <div>
-                
-            </div>
-
-
         </form>
     </section>
-    <div className='h-max goldGradient w-full text-center flex-col justify-center items-center py-14 md:py-24'>
-        <div className='flex-col justify-center items-center text-center'>
-        <Reveal>
-            <ImQuotesLeft size={40} color='white' className=' mx-auto '/>
-        </Reveal> 
-        <Reveal>
-            <p className='font-extrabold md:text-center text-pretty tracking-tight md:text-5xl text-3xl w-full text-white md:pt-14 pt-8  leading-2 md:px-36 px-9'>KLIPSAN FITNESS WAS CENTRAL IN HELPING ME GAIN THE STAMINA FOR MY RECENT MARATHON.</p>
-        </Reveal>
-        <Reveal>
-            <p className='mx-auto tracking-tight text-white md:pt-14 pt-8'>-Alejandro Jimenez</p>
-        </Reveal>
-        </div>
-    </div>
+   <QuotesBanner     />
    </>
   )
+}
+
+
+Form.defaultProps = {
+    bg:'white',
+    text:'#000',
+    
 }

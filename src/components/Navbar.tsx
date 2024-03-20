@@ -35,7 +35,7 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
                 <ul className='flex justify-center items-center gap-7 font-semibold '>
                     <li className='relative about cursor-pointer'>About</li>
                     <div className='bg-black text-white absolute top-9 -translate-x-10 text-start pl-5  hidden py-3 w-[17rem] capitalize i'>
-                        <span className='cursor-pointer'>instructors</span>
+                       <Link to={'/Instructors'}> <span className='cursor-pointer'>instructors</span></Link>
                         <span className='cursor-pointer'> Classes</span>
                         <span className='cursor-pointer'>Pricing</span>
                     </div>
