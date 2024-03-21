@@ -1,9 +1,8 @@
 import { useInView ,motion} from 'framer-motion'
-import React, { useEffect, useRef, useState } from 'react'
+import React, {  useRef, useState } from 'react'
 import { FaFacebook, FaGripLines, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { GrCart } from 'react-icons/gr'
 import { IoMdClose } from 'react-icons/io'
-import { MdOpacity } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 interface props{
     text:string;
