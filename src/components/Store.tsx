@@ -15,13 +15,13 @@ export const Store:React.FC = () => {
              <button className='w-[50%] md:w-[25%] px-18 md:px-10 py-2 text-[#1470af] left-[50%] transform -translate-x-1/2 hover:bg-[#1470af] hover:text-white absolute bottom-[3%] border-2 border-[#1470af] rounded-3xl'>BUY NOW</button>
          </Reveal>
     </div>
-    <section className='mt-8 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-center items-center gap-2 mx-2  lg:gap-10 lg:mx-10'>
+    <section className='mt-8 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 justify-center items-center gap-2 mx-2  lg:gap-2 lg:mx-10'>
         {products.map((product , index )=>
             <article key={index} className='flex   w-full my-8  justify-center items-center'>
             <a href="#" className='flex flex-col justify-center items-center gap-4 w-full'>
                 <Reveal>
                     <div className="image-container relative w-full h-[13rem] md:w-full md:h-[13rem] lg:h-[16rem] " >
-                         <img src={product.productImg} className='absolute w-full h-full object-cover align-middle top-0 bottom-0 left-0 right-0' alt="Fresh Pressed Juices" />
+                         <img src={product.productImg} className='absolute h-full w-full  object-cover align-middle top-0 bottom-0 left-0 right-0' alt="Fresh Pressed Juices" />
                     </div>
                 </Reveal>
                 <Reveal>

@@ -9,7 +9,8 @@ import { Store } from "./Store";
 import { Instructors } from "./Instructors";
 import { Classes } from "./Classes";
 import { QuotesBanner } from "./QuotesBanner";
-
+import { Prices } from "./Prices";
 export {Navbar , Footer ,TopBanner, Descibe 
     , Form, Contact, Schedules , Store 
-    , Instructors ,Classes ,QuotesBanner}
+    , Instructors ,Classes ,QuotesBanner
+    ,Prices}

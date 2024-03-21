@@ -67,7 +67,16 @@ export const products:product[] = [
         pack:['$25.00','$50.00','$75.00','$100.00'],
         features:['• 100% organic cotton' , '• Pre-washed'],
         productImg:whitetsirt
+    },
+    {
+        productName :'Gift Card',
+        price:'from $25.00',
+        cost:25,
+        pack:['$25.00','$50.00','$75.00','$100.00'],
+        features:['This gift card never expires'],
+        productImg:giftCard
     }
+    
     
 
 ]

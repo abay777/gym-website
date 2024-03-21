@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Contact, Schedules, Store, Instructors, Classes } from './components'
+import { Contact, Schedules, Store, Instructors, Classes, Prices } from './components'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/Store' element={<Store/>}/>
         <Route path='/Instructors' element={<Instructors/>}/>
         <Route path='/Classes' element={<Classes/>}/>
+        <Route path='/Price' element={<Prices/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
