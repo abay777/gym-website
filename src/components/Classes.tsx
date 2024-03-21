@@ -7,7 +7,7 @@ import yoga from '../assets/yoga cover.jpeg';
 import boxing from '../assets/footer2.jpg';
 import pilates from '../assets/pilates cover.jpeg';
 import strength from '../assets/strength cover.jpeg';
-import { easeInOut } from 'framer-motion/dom';
+
 
 const variants = {
   initial:{

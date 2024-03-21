@@ -1,7 +1,6 @@
 import React from 'react'
 import storecover from '../assets/store-cover.png'
 import { Footer, Navbar } from '.'
-import freshJuice from '../assets/pressed juice.png'
 import { products } from '../Data/products'
 import { Reveal } from './framer reveal/Reveal'
 

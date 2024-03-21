@@ -37,7 +37,7 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
                     <div className='bg-black text-white absolute top-9 -translate-x-10 text-start pl-5  hidden py-3 w-[17rem] capitalize i'>
                        <Link to={'/Instructors'}> <span className='cursor-pointer'>instructors</span></Link>
                        <Link to={'/Classes'}> <span className='cursor-pointer'> Classes</span></Link>
-                        <span className='cursor-pointer'>Pricing</span>
+                       <Link to={'/prices'}>  <span className='cursor-pointer'>Pricing</span></Link>      
                     </div>
                     <Link to={'/Schedule'}>
                     <li className='cursor-pointer'>Schedule</li>
@@ -88,7 +88,7 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
                 <ul className={ `flex-col  font-semibold text-4xl text-[${text}]`}>
                     <li className='py-3 pl-14  cursor-pointer '>About <span className='font-extralight' onClick={()=>setAbout(!about)}> &gt;</span></li>
                    <Link to={'/schedule'}><li className='py-3 pl-14 cursor-pointer '>Schedule</li></Link>
-                        <li className='py-3 pl-14  cursor-pointer'>Contact</li>
+                    <Link to={'/Contact'}> <li className='py-3 pl-14  cursor-pointer'>Contact</li></Link>   
                     <Link to={'/store'}>
                         <li className='py-3 pl-14  cursor-pointer'>Store</li>
                     </Link>
@@ -97,9 +97,11 @@ export const Navbar:React.FC<props> = ({text,bg}) => {
                      whileInView={{opacity:1, translateX:0 }}
                      transition={{duration:.1}}>
                         <p className='text-gray-500  pl-14 py-3'> <span className='font-extralight' onClick={()=>setAbout(!about)}>&lt;</span> Back</p>
-                        <p className=' pl-14 py-3 cursor-pointer'>instructors</p>
-                        <p className=' pl-14 py-3 cursor-pointer'>Classes</p>
-                        <p className=' pl-14 py-3 cursor-pointer'>Pricing</p>   
+                        <Link to={"/Instructors"}><p className=' pl-14 py-3 cursor-pointer'>instructors</p> </Link>
+                        <Link to={"/Classes"}><p className=' pl-14 py-3 cursor-pointer'>Classes</p></Link>
+                        <Link to={"/Prices"}><p className=' pl-14 py-3 cursor-pointer'>Pricing</p>  </Link>
+                      
+                      
                     </motion.div>
                 </ul>
 
