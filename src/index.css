@@ -53,3 +53,26 @@ body{
   background-image: linear-gradient(135deg, #eab861 7%, #d5c38d 45%, #c7c0c0 87%);
 
 }
+
+.cardioPic ,.yogaPic ,.boxingPic
+,.pilatesPic,.strengthPic{
+  display:none ;
+}
+
+.cardio:hover ~ div > .cardioPic,
+.yoga:hover ~ div > .yogaPic,
+.boxing:hover ~ div > .boxingPic,
+.pilates:hover ~ div > .pilatesPic,
+.strength:hover ~ div > .strengthPic {
+ display: inline;
+ transition: ease-in-out;
+}
+
+.cardio:active ~ div > .cardioPic,
+.yoga:active ~ div > .yogaPic,
+.boxing:active ~ div > .boxingPic,
+.pilates:active ~ div > .pilatesPic,
+.strength:active ~ div > .strengthPic {
+ display: inline;
+ transition: ease-in-out;
+}

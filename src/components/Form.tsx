@@ -1,4 +1,4 @@
-import { QuotesBanner } from './QuotesBanner';
+
 import React from 'react'
 import { Reveal } from './framer reveal/Reveal'
 
@@ -11,7 +11,7 @@ interface props {
 export const Form:React.FC<props> = ({bg,text}) => {
   return (
    <>
-     <section className={`bg-${bg} text-[${text}] pl-5 md:pl-10 py-14 flex flex-col md:flex-row`}>
+     <section className={`bg-${bg} text-${text} pl-5 md:pl-10 py-14 flex flex-col md:flex-row`}>
         <div className='w-full md:w-[40%]'>
             <Reveal>
                 <h1 className='font-extrabold text-3xl tracking-tighter '>SCHEDULE A VISIT</h1>
@@ -40,17 +40,17 @@ export const Form:React.FC<props> = ({bg,text}) => {
             <label htmlFor="date">Date <span className='text-gray-600 '>(required)</span></label>
             <input type="date"  className='py-2 px-5 w-[12rem] border-2 border-gray-500 block' name='date' id='date' />
            </article>
-           <button className='mt-5 border-2 border-black py-3 px-7 rounded-3xl hover:bg-black hover:text-white'>submit</button>
+           <button className={`mt-5 border-2 border-${bg} py-3 text-${bg} px-7 bg-${text}  rounded-3xl hover:bg-${bg} hover:border-[#1470af] hover:text-${text}`}>submit</button>
         </form>
     </section>
-   <QuotesBanner     />
+  
    </>
   )
 }
 
 
 Form.defaultProps = {
-    bg:'white',
-    text:'#000',
+    bg:'black',
+    text:'red',
     
 }

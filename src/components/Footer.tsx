@@ -63,7 +63,6 @@ export const Footer:React.FC = () => {
                       <p className='text-3xl font-extrabold tracking-tighter'>Gymic</p>  
                 </div>
             </section>
-
           </footer>
   )
 }

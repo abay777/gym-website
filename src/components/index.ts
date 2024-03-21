@@ -7,6 +7,9 @@ import { Contact } from "./Contact";
 import { Schedules } from "./Schedules";
 import { Store } from "./Store";
 import { Instructors } from "./Instructors";
+import { Classes } from "./Classes";
+import { QuotesBanner } from "./QuotesBanner";
 
-
-export {Navbar , Footer ,TopBanner, Descibe , Form, Contact, Schedules , Store , Instructors}
+export {Navbar , Footer ,TopBanner, Descibe 
+    , Form, Contact, Schedules , Store 
+    , Instructors ,Classes ,QuotesBanner}

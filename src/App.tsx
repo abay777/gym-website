@@ -1,6 +1,6 @@
 
 import './App.css'
-import { Descibe, Footer, Form, Navbar, TopBanner } from './components'
+import { Descibe, Footer, Form, Navbar, TopBanner,QuotesBanner } from './components'
 import { LastBanner } from './components/LastBanner'
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
       <Navbar text={'#1470af'} bg={'black'}/>
       <TopBanner/>
       <Descibe />
-      <Form />
+      <Form text={'black'} bg={'white'}/>
+      <QuotesBanner/>
       <LastBanner/>
       <Footer/>
     </>

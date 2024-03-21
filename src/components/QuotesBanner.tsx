@@ -2,7 +2,7 @@ import React from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import { Reveal } from "./framer reveal/Reveal";
 
-export const QuotesBanner = ()=>{
+export const QuotesBanner:React.FC = ()=>{
   return (<div className='h-max goldGradient w-full text-center flex-col justify-center items-center py-14 md:py-24'>
         <div className='flex-col justify-center items-center text-center'>
         <Reveal>
