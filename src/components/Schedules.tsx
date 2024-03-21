@@ -7,7 +7,7 @@ export const Schedules:React.FC = () => {
   return (
     <>
         <ScrolltoTop/>
-        <Navbar text={'black'} bg={'white'}/>
+        <Navbar text={'black'} bg={'white'} anime={true}/>
          <section className='bg-white pt-10'>
         <article className='flex flex-col md:flex-row pt-5 justify-start items-start gap-10 md:gap-20 md:px-10 pl-10 '>
             <Reveal>

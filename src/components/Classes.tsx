@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { motion } from 'framer-motion';
 import { Footer, Form, Navbar, ScrolltoTop } from '.';
 import { LastBanner } from './LastBanner';

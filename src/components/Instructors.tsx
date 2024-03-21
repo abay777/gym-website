@@ -25,7 +25,7 @@ export const Instructors:React.FC = () => {
   return (
     <>
         <ScrolltoTop/>
-        <Navbar text={'#000'} bg={'white'} />
+        <Navbar text={'#000'} bg={'white'} anime={true} />
         <section className='grid grid-cols-2 md:grid-cols-3 mt-14 gap-4 mx-4  justify-evenly'>
         <article className='relative text-white w-full'>
             <img src={nichola} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
