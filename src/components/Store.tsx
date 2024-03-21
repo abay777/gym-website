@@ -1,13 +1,14 @@
 import React from 'react'
 import storecover from '../assets/store-cover.png'
-import { Footer, Navbar } from '.'
+import { Footer, Navbar, ScrolltoTop } from '.'
 import { products } from '../Data/products'
 import { Reveal } from './framer reveal/Reveal'
 
 export const Store:React.FC = () => {
   return (
     <>
-    <Navbar text={'#000'} bg={'white'}/>
+    <ScrolltoTop/>
+    <Navbar text={'#000'} bg={'white'} anime={true}/>
     <div className='mt-0 relative'>
         <img src={storecover} className='object-cover h-[34rem] w-full  ' alt="" />
          <Reveal>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Navbar } from '.'
+import { Footer, Navbar, ScrolltoTop } from '.'
 import nichola from '../assets/Nicole+Winter-instructor.jpg'
 import aaron from '../assets/aron-instructor.jpg'
 import derrick from '../assets/Derrick+Sawyers.+Cardio-instructor.jpg'
@@ -24,6 +24,7 @@ const variantz:any = {
 export const Instructors:React.FC = () => {
   return (
     <>
+        <ScrolltoTop/>
         <Navbar text={'#000'} bg={'white'} />
         <section className='grid grid-cols-2 md:grid-cols-3 mt-14 gap-4 mx-4  justify-evenly'>
         <article className='relative text-white w-full'>

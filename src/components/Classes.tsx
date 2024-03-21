@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Footer, Form, Navbar } from '.';
+import { Footer, Form, Navbar, ScrolltoTop } from '.';
 import { LastBanner } from './LastBanner';
 import cardio from '../assets/footer1.jpg';
 import yoga from '../assets/yoga cover.jpeg';
@@ -20,18 +20,19 @@ const variants = {
 
 export const Classes: React.FC = () => {
   const [hoverX, setHoverX] = useState(0);
-
+ 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     setHoverX(event.clientX);
   };
 
-
+ 
 
   return (
     <>
-      <Navbar bg='white' text='#000' />
+    <ScrolltoTop/>
+      <Navbar bg='white' text='#000' anime={false} />
       <section>
-        <div className='flex relative gap-5 tracking-tighter cursor-pointer flex-col justify-center items-center text-4xl font-extrabold mt-20 mb-20 z-0'>
+        <div className='flex relative gap-5 tracking-tighter cursor-pointer flex-col justify-center items-center text-4xl font-extrabold pt-10 mt-20 mb-20 z-0'>
           <h1 className='z-10 cardio hover:bg-opacity-50' onMouseMove={handleMouseMove}>CARDIO</h1>
           <h1 className='z-10 yoga  hover:bg-opacity-50' onMouseMove={handleMouseMove}>YOGA</h1>
           <h1 className='z-10 boxing hover:bg-opacity-50' onMouseMove={handleMouseMove}>BOXING</h1>

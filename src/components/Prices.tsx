@@ -1,10 +1,11 @@
 import React from 'react'
 import { Reveal } from './framer reveal/Reveal'
-import { Footer, Navbar } from '.'
+import { Footer, Navbar, ScrolltoTop } from '.'
 
 export const Prices:React.FC = () => {
   return (
     <>
+    <ScrolltoTop/>
     <Navbar bg='white' text='black' />
     <section>
        ` <article className='grid md:grid-cols-2 grid-cols-1 justify-evenly items-center mx-10'>

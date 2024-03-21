@@ -1,11 +1,12 @@
 import React from 'react'
 import { Reveal } from './framer reveal/Reveal'
-import { Footer, Navbar } from '.'
+import { Footer, Navbar, ScrolltoTop } from '.'
 
 export const Contact:React.FC = () => {
   return (
     <>
-        <Navbar text='#000' bg={'white'}/>
+    <ScrolltoTop/>
+        <Navbar text='#000' bg={'white'} anime={true}/>
         <section className='mt-14 py-4'>
             <article className='flex flex-col lg:flex-row  pl-7 md:pl-10 gap-20 md:gap-40 items-start '  >
                 <div className='flex flex-col justify-center gap-10'>
