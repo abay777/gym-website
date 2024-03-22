@@ -1,13 +1,14 @@
 import React from 'react'
 import storecover from '../assets/store-cover.png'
-import { Footer, Navbar } from '.'
+import { Footer, Navbar, ScrolltoTop } from '.'
 import { products } from '../Data/products'
 import { Reveal } from './framer reveal/Reveal'
 
 export const Store:React.FC = () => {
   return (
     <>
-    <Navbar text={'#000'} bg={'white'}/>
+    <ScrolltoTop/>
+    <Navbar text={'#000'} bg={'white'} anime={true}/>
     <div className='mt-0 relative'>
         <img src={storecover} className='object-cover h-[34rem] w-full  ' alt="" />
          <Reveal>
@@ -20,7 +21,7 @@ export const Store:React.FC = () => {
             <a href="#" className='flex flex-col justify-center items-center gap-4 w-full'>
                 <Reveal>
                     <div className="image-container relative w-full h-[13rem] md:w-full md:h-[13rem] lg:h-[16rem] " >
-                         <img src={product.productImg} className='absolute h-full w-full  object-cover align-middle top-0 bottom-0 left-0 right-0' alt="Fresh Pressed Juices" />
+                         <img loading='lazy' src={product.productImg} className='absolute h-full w-full  object-cover align-middle top-0 bottom-0 left-0 right-0' alt="Fresh Pressed Juices" />
                     </div>
                 </Reveal>
                 <Reveal>

@@ -7,7 +7,7 @@ function App() {
   
   return (
     <>
-      <Navbar text={'#1470af'} bg={'black'}/>
+      <Navbar text={'#1470af'} bg={'black'} anime={true}/>
       <TopBanner/>
       <Descibe />
       <Form text={'black'} bg={'white'}/>

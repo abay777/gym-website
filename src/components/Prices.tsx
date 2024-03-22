@@ -1,11 +1,12 @@
 import React from 'react'
 import { Reveal } from './framer reveal/Reveal'
-import { Footer, Navbar } from '.'
+import { Footer, Navbar, ScrolltoTop } from '.'
 
 export const Prices:React.FC = () => {
   return (
     <>
-    <Navbar bg='white' text='black' />
+    <ScrolltoTop/>
+    <Navbar bg='white' text='black' anime={true} />
     <section>
        ` <article className='grid md:grid-cols-2 grid-cols-1 justify-evenly items-center mx-10'>
         <div className=' flex md:flex-col flex-row h-full gap-5  items-center md:items-start md:justify-between justify-center'>

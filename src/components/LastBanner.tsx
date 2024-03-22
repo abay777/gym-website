@@ -40,12 +40,12 @@ export  const LastBanner:React.FC = ()=>{
             </section>
             <Reveal>
                 <section className='grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 gap-0 mt-10 '>
-                    <img src={footer1} className='m-0 object-contain w-full' alt="athlete image" />
-                    <img src={footer2} className='m-0 object-contain w-full ' alt="athlete image" />
-                    <img src={footer3} className='m-0 object-contain w-full' alt="athlete image" />
-                    <img src={footer4} className='m-0 object-contain w-full' alt="athlete" />
-                    <img src={footer5} className='m-0 object-contain w-full' alt="athlete image" />
-                    <img src={footer6} className='m-0 object-contain w-full' alt="athlete image" />
+                    <img loading="lazy" src={footer1} className='m-0 object-contain w-full' alt="athlete image" />
+                    <img loading="lazy" src={footer2} className='m-0 object-contain w-full ' alt="athlete image" />
+                    <img loading="lazy" src={footer3} className='m-0 object-contain w-full' alt="athlete image" />
+                    <img loading="lazy" src={footer4} className='m-0 object-contain w-full' alt="athlete" />
+                    <img loading="lazy" src={footer5} className='m-0 object-contain w-full' alt="athlete image" />
+                    <img loading="lazy" src={footer6} className='m-0 object-contain w-full' alt="athlete image" />
                 </section> 
             </Reveal>
             </section>;

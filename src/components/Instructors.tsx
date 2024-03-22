@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Navbar } from '.'
+import { Footer, Navbar, ScrolltoTop } from '.'
 import nichola from '../assets/Nicole+Winter-instructor.jpg'
 import aaron from '../assets/aron-instructor.jpg'
 import derrick from '../assets/Derrick+Sawyers.+Cardio-instructor.jpg'
@@ -24,10 +24,11 @@ const variantz:any = {
 export const Instructors:React.FC = () => {
   return (
     <>
-        <Navbar text={'#000'} bg={'white'} />
+        <ScrolltoTop/>
+        <Navbar text={'#000'} bg={'white'} anime={true} />
         <section className='grid grid-cols-2 md:grid-cols-3 mt-14 gap-4 mx-4  justify-evenly'>
         <article className='relative text-white w-full'>
-            <img src={nichola} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
+            <img loading='lazy' src={nichola} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
             <motion.div 
             variants={variantz}
             initial='initial'
@@ -39,7 +40,7 @@ export const Instructors:React.FC = () => {
             </motion.div>
         </article>
         <article className='relative text-white w-full'>
-            <img src={aaron} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
+            <img loading='lazy' src={aaron} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
             <motion.div 
             variants={variantz}
             initial='initial'
@@ -51,7 +52,7 @@ export const Instructors:React.FC = () => {
             </motion.div>
         </article>
         <article className='relative text-white w-full'>
-            <img src={derrick} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
+            <img loading='lazy' src={derrick} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
             <motion.div 
             variants={variantz}
             initial='initial'
@@ -63,7 +64,7 @@ export const Instructors:React.FC = () => {
             </motion.div>
         </article>
         <article className='relative text-white w-full'>
-            <img src={aliyah} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
+            <img loading='lazy' src={aliyah} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
             <motion.div 
             variants={variantz}
             initial='initial'
@@ -75,7 +76,7 @@ export const Instructors:React.FC = () => {
             </motion.div>
         </article>
         <article className='relative text-white w-full'>
-            <img src={omar} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
+            <img loading='lazy' src={omar} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
             <motion.div 
             variants={variantz}
             initial='initial'
@@ -87,7 +88,7 @@ export const Instructors:React.FC = () => {
             </motion.div>
         </article>
         <article className='relative text-white w-full'>
-            <img src={teshia} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
+            <img loading='lazy' src={teshia} className='w-full max-h-[28rem] h-auto ' alt="nichola instructor" /> 
             <motion.div 
             variants={variantz}
             initial='initial'

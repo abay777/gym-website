@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { motion ,stagger} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 interface props{
     children:ReactNode

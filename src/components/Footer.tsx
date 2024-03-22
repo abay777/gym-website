@@ -19,7 +19,8 @@ export const Footer:React.FC = () => {
                 </div>
                 <div className=' flex-col justify-center items-center mt-14'>
                     <Reveal>
-                    <input type="email" placeholder='Email' className='px-10 md:px-14 py-4'  />
+                        <label htmlFor="email"></label>
+                    <input type="email" name='email' id='email' autoComplete='on' placeholder='Email' className='px-10 md:px-14 py-4'  />
 
                     </Reveal>
                     <Reveal>
