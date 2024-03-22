@@ -10,7 +10,7 @@ export const Store:React.FC = () => {
     <ScrolltoTop/>
     <Navbar text={'#000'} bg={'white'} anime={true}/>
     <div className='mt-0 relative'>
-        <img loading='lazy' src={storecover} className='object-cover h-[34rem] w-full  ' alt="" />
+        <img src={storecover} className='object-cover h-[34rem] w-full  ' alt="" />
          <Reveal>
              <button className='w-[50%] md:w-[25%] px-18 md:px-10 py-2 text-[#1470af] left-[50%] transform -translate-x-1/2 hover:bg-[#1470af] hover:text-white absolute bottom-[3%] border-2 border-[#1470af] rounded-3xl'>BUY NOW</button>
          </Reveal>
