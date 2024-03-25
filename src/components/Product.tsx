@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, UIEventHandler, useCallback, useEffect, useState } from 'react';
+import React, { MouseEventHandler, useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Footer, Navbar } from '.';
 import { Reveal } from './framer reveal/Reveal';
