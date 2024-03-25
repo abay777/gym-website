@@ -4,6 +4,7 @@ import { FaFacebook, FaGripLines, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { GrCart } from 'react-icons/gr'
 import { IoMdClose } from 'react-icons/io'
 import { Link } from 'react-router-dom'
+import { useAppSelector } from '../state/store'
 interface props{
     text:string;
     bg:string;
@@ -18,6 +19,7 @@ export const Navbar:React.FC<props> = ({text,bg,anime}) => {
       const  viewRef = useRef<HTMLDivElement>(null)
       const isInView = useInView(viewRef)
      
+      const cartCount= useAppSelector(state=>state.products.total)
   
        
      
@@ -57,7 +59,7 @@ export const Navbar:React.FC<props> = ({text,bg,anime}) => {
                     </div>
                     <div className='flex items-center  gap-2 lg:gap-3'>
                         <GrCart size={20}/>
-                        <span>0</span>
+                        <span>{cartCount}</span>
 
                     </div>
                 </div>
@@ -69,7 +71,7 @@ export const Navbar:React.FC<props> = ({text,bg,anime}) => {
             <div className='flex gap-[5rem]'>
             <div className='flex items-center gap-3 cursor-pointer'>
                 <GrCart size={25}/>
-                <span>0</span>
+                <span>{cartCount}</span>
             </div>
             <div className='flex z-20 justify-center items-center cursor-pointer'
             onClick={()=>{

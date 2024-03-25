@@ -11,7 +11,8 @@ import { Classes } from "./Classes";
 import { QuotesBanner } from "./QuotesBanner";
 import { Prices } from "./Prices";
 import { ScrolltoTop } from "../ScrolltoTop";
+import { Product } from "./Product";
 export {Navbar , Footer ,TopBanner, Descibe 
     , Form, Contact, Schedules , Store 
     , Instructors ,Classes ,QuotesBanner
-    ,Prices , ScrolltoTop}
+    ,Prices , ScrolltoTop , Product}

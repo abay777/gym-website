@@ -3,6 +3,7 @@ import storecover from '../assets/store-cover.png'
 import { Footer, Navbar, ScrolltoTop } from '.'
 import { products } from '../Data/products'
 import { Reveal } from './framer reveal/Reveal'
+import { Link } from 'react-router-dom'
 
 export const Store:React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export const Store:React.FC = () => {
     <section className='mt-8 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 justify-center items-center gap-2 mx-2  lg:gap-2 lg:mx-10'>
         {products.map((product , index )=>
             <article key={index} className='flex   w-full my-8  justify-center items-center'>
-            <a href="#" className='flex flex-col justify-center items-center gap-4 w-full'>
+            <Link to={`/Store/${product.id}`} className='flex flex-col justify-center items-center gap-4 w-full'>
                 <Reveal>
                     <div className="image-container relative w-full h-[13rem] md:w-full md:h-[13rem] lg:h-[16rem] " >
                          <img loading='lazy' src={product.productImg} className='absolute h-full w-full  object-cover align-middle top-0 bottom-0 left-0 right-0' alt="Fresh Pressed Juices" />
@@ -30,7 +31,7 @@ export const Store:React.FC = () => {
                         <p className='font-semibold text-xs text-center'>{product.price}</p>
                     </div>
                 </Reveal>
-            </a>
+            </Link>
         </article>
 
             )}
