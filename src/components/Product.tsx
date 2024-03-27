@@ -5,8 +5,9 @@ import { Reveal } from './framer reveal/Reveal';
 import { AppDispatch, useAppSelector } from '../state/store';
 import { product } from '../Data/products';
 import { useDispatch } from 'react-redux';
-import { cartUpdate } from '../state/productSlice';
 import { MdOutlineShop } from 'react-icons/md';
+import { addToCart } from '../state/CartSlice';
+
 
 export const Product: React.FC = () => {
 
@@ -15,7 +16,7 @@ export const Product: React.FC = () => {
     const  {id} = useParams(); 
     const productsContainer = useAppSelector((state) => state.products);
     const dispatch = useDispatch<AppDispatch>()
-    const matchProducts = productsContainer.productsBag.filter(product => product.id === Number(id))
+    const matchProducts = productsContainer.productsBag.filter((product:product) => product.id === Number(id))
    
     const handleChange = useCallback((event:React.ChangeEvent<HTMLSelectElement>,product:product)=>{
          if(product.calc){
@@ -38,8 +39,8 @@ export const Product: React.FC = () => {
     let handleBuy:MouseEventHandler<HTMLElement> = useCallback(() => {
             clearTimeout(timeout);
         if (selectedOption !== undefined) {
-            matchProducts.map(product => {
-                dispatch(cartUpdate({ quantity: selectedOption, amount: Number(product.cost) }));
+            matchProducts.map((product:product) => {
+                dispatch(addToCart({ quantity: selectedOption, product}));
             });
         }else{
             alert('please select your pack')
@@ -63,12 +64,12 @@ export const Product: React.FC = () => {
         <>
             <Navbar bg='white' text='#000' anime={true}/>
             <section>
-                <h1 className='text-sm font-light pl-16 mt-20 '>store &gt; {matchProducts.map(product => product.productName)}</h1>
+                <h1 className='text-sm font-light pl-16 mt-20 '>store &gt; {matchProducts.map((product:product) => product.productName)}</h1>
                 {
                      
                     
-                     matchProducts.map((product, index) => (
-                        <article key={index} className='flex flex-col-reverse md:flex-row mx-14 mt-16 justify-center items-start pb-10 gap-10'>
+                     matchProducts.map((product:product,) => (
+                        <article key={product.id} className='flex flex-col-reverse md:flex-row mx-14 mt-16 justify-center items-start pb-10 gap-10'>
                             <Reveal>
                                 <div>
                                     <div className='flex flex-col gap-7'>

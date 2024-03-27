@@ -94,3 +94,7 @@ export const products:product[] = [
     
 
 ]
+
+localStorage.setItem('productList',JSON.stringify(products))
+
+export const productz = JSON.parse(localStorage.getItem('productList')||'{}') || products

@@ -4,7 +4,7 @@ import { Descibe, Footer, Form, Navbar, TopBanner,QuotesBanner } from './compone
 import { LastBanner } from './components/LastBanner'
 
 function App() {
-  
+
   return (
     <>
       <Navbar text={'#1470af'} bg={'black'} anime={true}/>

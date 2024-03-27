@@ -12,7 +12,9 @@ import { QuotesBanner } from "./QuotesBanner";
 import { Prices } from "./Prices";
 import { ScrolltoTop } from "../ScrolltoTop";
 import { Product } from "./Product";
+import { Cart } from "./Cart";
+
 export {Navbar , Footer ,TopBanner, Descibe 
     , Form, Contact, Schedules , Store 
     , Instructors ,Classes ,QuotesBanner
-    ,Prices , ScrolltoTop , Product}
+    ,Prices , ScrolltoTop , Product , Cart}
