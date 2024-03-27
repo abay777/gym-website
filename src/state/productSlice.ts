@@ -11,13 +11,7 @@ export const Initialstate:productIntialState = {
     productsBag:productz,
 }
 
-interface actions{
-    type:string;
-    payload:{
-        quantity:number;
-        amount:number;
-    }
-}
+
  
     
  
@@ -27,7 +21,7 @@ interface actions{
     name:'product',
     initialState:Initialstate,
     reducers:{
-        default1:(state,action)=>{
+        default1:(state)=>{
           return state
         }
          

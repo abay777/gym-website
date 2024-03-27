@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from 'react'
+import React from 'react'
 import { AppDispatch, useAppSelector } from '../state/store'
 import { useDispatch } from 'react-redux'
 import { deleteFromCart } from '../state/CartSlice'
@@ -10,7 +10,7 @@ import { deleteFromCart } from '../state/CartSlice'
 export const Cart:React.FC = () => {
    const dispatch = useDispatch<AppDispatch>()
    const cart = useAppSelector(state=>state.cart)
-   const {cartList,tQuantity,totalAmount} = cart
+   const {cartList} = cart
 
    const handleDelete:(id: number) => void = (id) => {
     dispatch(deleteFromCart(id))

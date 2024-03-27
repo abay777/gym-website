@@ -7,7 +7,7 @@ import { product } from '../Data/products';
 import { useDispatch } from 'react-redux';
 import { MdOutlineShop } from 'react-icons/md';
 import { addToCart } from '../state/CartSlice';
-import useLocalStorage from './Custom comoponents/LocalStorage';
+
 
 export const Product: React.FC = () => {
 
