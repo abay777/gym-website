@@ -19,7 +19,7 @@ export const Navbar:React.FC<props> = ({text,bg,anime}) => {
       const  viewRef = useRef<HTMLDivElement>(null)
       const isInView = useInView(viewRef)
      
-      const cartCount= useAppSelector(state=>state.products.total)
+      const cartCount= useAppSelector(state=>state.cart.tQuantity)
   
        
      
@@ -57,11 +57,11 @@ export const Navbar:React.FC<props> = ({text,bg,anime}) => {
                         <FaYoutube size={18}/>
                         <FaFacebook size={18}/>
                     </div>
-                    <div className='flex items-center  gap-2 lg:gap-3'>
+                    <Link to={'/Cart'} className='flex items-center  gap-2 lg:gap-3'>
                         <GrCart size={20}/>
                         <span>{cartCount}</span>
 
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>
@@ -69,10 +69,10 @@ export const Navbar:React.FC<props> = ({text,bg,anime}) => {
             <div className='text-3xl font-bold pl-5 flex justify-between'><Link to={'/'}>Gmyic</Link>
             </div>
             <div className='flex gap-[5rem]'>
-            <div className='flex items-center gap-3 cursor-pointer'>
+            <Link to={'/Cart'} className='flex items-center gap-3 cursor-pointer'>
                 <GrCart size={25}/>
                 <span>{cartCount}</span>
-            </div>
+            </Link>
             <div className='flex z-20 justify-center items-center cursor-pointer'
             onClick={()=>{
             setBurger(!burger) 

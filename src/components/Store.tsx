@@ -1,11 +1,13 @@
 import React from 'react'
 import storecover from '../assets/store-cover.png'
 import { Footer, Navbar, ScrolltoTop } from '.'
-import { products } from '../Data/products'
 import { Reveal } from './framer reveal/Reveal'
 import { Link } from 'react-router-dom'
+import { useAppSelector } from '../state/store'
 
 export const Store:React.FC = () => {
+  const products = useAppSelector(state=>state.products.productsBag)
+
   return (
     <>
     <ScrolltoTop/>
