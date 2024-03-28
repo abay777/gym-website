@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { product } from "../Data/products";
 
-interface Cart extends product {
-    quantity: number;
-    totalCost: number;
+export interface Carts extends product {
+        quantity: number;
+        totalCost: number;
 }
 
 export interface CartInitialState {
     tQuantity: number;
     totalAmount: number;
-    cartList: Cart[];
+    cartList: Carts[];
 }
 
 const initialState: CartInitialState = {
@@ -70,9 +70,33 @@ const cartSlice = createSlice({
                }
            }
            
+        },
+        updateCartQuantity:(state,action:PayloadAction<{product:Carts,quantity:number}>)=>{
+           const {product,quantity} = action.payload
+           const existingProduct = state.cartList.findIndex(pro=>pro.id === product.id)
+           if(existingProduct !== -1){
+             const newQnty = quantity; 
+             const newCartItem = {...product, quantity:newQnty,totalCost:(product.cost * newQnty)}
+             const newCartList = [...state.cartList]
+             newCartList[existingProduct] = newCartItem;
+             const newTotalquantity = newCartList.reduce((acc:number,elem:Carts)=>acc + elem.quantity,0)
+             const newTotalAmount = newCartList.reduce((acc,elem)=>acc + elem.totalCost,0)
+             return{
+                ...state,
+                cartList:newCartList,
+                tQuantity:newTotalquantity,
+                totalAmount:newTotalAmount
+            }
+
+           }else{
+            console.log('error cartQuantity update failed');
+            
+            return state
+           }
+
         }
     },
 });
 
-export const { addToCart , deleteFromCart} = cartSlice.actions;
+export const { addToCart , deleteFromCart, updateCartQuantity} = cartSlice.actions;
 export default cartSlice.reducer;

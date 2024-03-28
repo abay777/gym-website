@@ -1,6 +1,6 @@
 import React, { MouseEventHandler, useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Footer, Navbar } from '.';
+import { Footer, Navbar, ScrolltoTop } from '.';
 import { Reveal } from './framer reveal/Reveal';
 import { AppDispatch, useAppSelector } from '../state/store';
 import { product } from '../Data/products';
@@ -30,8 +30,6 @@ export const Product: React.FC = () => {
                 setSelectedOption(()=> 1)
             }
          }
-       
-         console.log(selectedOption)
         
     },[selectedOption])
 
@@ -62,6 +60,7 @@ export const Product: React.FC = () => {
 
     return (
         <>
+            <ScrolltoTop/>
             <Navbar bg='white' text='#000' anime={true}/>
             <section>
                 <h1 className='text-sm font-light pl-16 mt-20 '>store &gt; {matchProducts.map((product:product) => product.productName)}</h1>
@@ -84,13 +83,13 @@ export const Product: React.FC = () => {
                                                 ))}
                                             </ul>
                                             <div className='flex-col flex  md:w-5/12 w-7/12 '>
-                                                <label htmlFor='' className='text-sm '>pack:</label>
-                                                <select value={selectedOption} 
+                                                <label htmlFor='pack' className='text-sm '>pack:</label>
+                                                <select  value={selectedOption} id='pack'
                                                 onChange={(event)=>handleChange(event ,product)}
-                                                name='' id='' className='border-black border-2 py-2  select-inner-border px-4'>
-                                                    <option value="0">choose Pack</option>
+                                                name='pack'  className='border-black border-2 py-2  select-inner-border px-4'>
+                                                    <option value="0" >choose Pack</option>
                                                     {product.pack.map((pk, i) => (
-                                                        <option key={i} value={pk} className=''>
+                                                        <option id='pack'  key={i} value={pk} className=''>
                                                             {pk}
                                                         </option>
                                                     ))}

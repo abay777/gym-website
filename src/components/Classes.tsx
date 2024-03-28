@@ -42,34 +42,34 @@ export const Classes: React.FC = () => {
             {hoverX > 0 && (
               <>
                 <motion.img src={cardio} alt="" className='cardioPic -z-10 h-[21rem]' style={{ x: hoverX -700 }} 
-                initial="initial" 
-                whileInView="animate"
-                variants={variants}
-                transition={{duration:1, ease:'easeInOut'}}
+                  initial="initial" 
+                  whileInView="animate"
+                  variants={variants}
+                  transition={{duration:1, ease:'easeInOut'}}
                  />
                 <motion.img src={yoga} alt="" className='yogaPic -z-10 h-[21rem]' loading='lazy' style={{ x: hoverX -700 }} 
-                initial="initial" 
-                whileInView="animate"
-                variants={variants}
-                transition={{duration:1,ease:'easeInOut'}}
+                  initial="initial" 
+                  whileInView="animate"
+                  variants={variants}
+                  transition={{duration:1,ease:'easeInOut'}}
                 />
                 <motion.img src={boxing} alt="" className='boxingPic -z-10 h-[21rem]' loading='lazy' style={{ x: hoverX  -700}} 
-                initial="initial" 
-                whileInView="animate"
-                variants={variants}
-                transition={{duration:1,ease:'easeInOut'}}
+                  initial="initial" 
+                  whileInView="animate"
+                  variants={variants}
+                  transition={{duration:1,ease:'easeInOut'}}
                 />
                 <motion.img src={pilates} alt="" className='pilatesPic -z-10 h-[21rem]' loading='lazy' style={{ x: hoverX  -700}} 
-                initial="initial" 
-                whileInView="animate"
-                variants={variants}
-                transition={{duration:1,ease:'easeInOut'}}
+                  initial="initial" 
+                  whileInView="animate"
+                  variants={variants}
+                  transition={{duration:1,ease:'easeInOut'}}
                 />
                 <motion.img src={strength} alt="" className='strengthPic -z-10 h-[21rem]'  loading='lazy' style={{ x: hoverX -700}} 
-                initial="initial" 
-                whileInView="animate"
-                variants={variants}
-                transition={{duration:1,ease:'easeInOut'}}
+                  initial="initial" 
+                  whileInView="animate"
+                  variants={variants}
+                  transition={{duration:1,ease:'easeInOut'}}
                 />
               </>
             )}

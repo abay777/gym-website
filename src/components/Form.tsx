@@ -21,7 +21,7 @@ export const Form:React.FC<props> = ({bg,text}) => {
             </Reveal> 
         </div>
         <form action="" className='px-0 md:px-10 py-10 md:py-0 w-full md:w-[60%]' autoComplete='on' >
-            <div>Name<span className='text-gray-600 '>(required)</span></div>
+           <div>Name<span className='text-gray-600 '>(required)</span></div>
            <article className='flex py-5 gap-4'>
                 <div className=''>
                     <label htmlFor="firstName">First Name</label>
@@ -33,12 +33,12 @@ export const Form:React.FC<props> = ({bg,text}) => {
                 </div>
            </article>
            <article>
-            <label htmlFor="email">Email <span className='text-gray-600 '>(required)</span></label>
-            <input type="email" name='email'className='py-2 px-5 w-[95%] border-2 border-gray-500' id='email' required autoComplete='on' />
+                <label htmlFor="email">Email <span className='text-gray-600 '>(required)</span></label>
+                <input type="email" name='email'className='py-2 px-5 w-[95%] border-2 border-gray-500' id='email' required autoComplete='on' />
            </article>
            <article className='pt-5'>
-            <label htmlFor="date">Date <span className='text-gray-600 '>(required)</span></label>
-            <input type="date"  className='py-2 px-5 w-[12rem] border-2 border-gray-500 block' name='date' id='date' />
+                <label htmlFor="date">Date <span className='text-gray-600 '>(required)</span></label>
+                <input type="date"  className='py-2 px-5 w-[12rem] border-2 border-gray-500 block' name='date' id='date' />
            </article>
            <button className={`mt-5 border-2 border-${bg} py-3 text-${bg} px-7 bg-${text}  rounded-3xl hover:bg-${bg} hover:border-[#1470af] hover:text-${text}`}>submit</button>
         </form>
