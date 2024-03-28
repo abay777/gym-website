@@ -60,7 +60,7 @@ export const products:product[] = [
         productName :'Protein Powder',
         price:'$30.00 every month',
         cost:30,
-        pack:[],
+        pack:[1],
         features:[
             '• 25g of protein per serving','• Grass fed, non-GMO','• Soy Free and Gluten Free',
             '• No rBGH or rBST','• Cold processed','• No artificial colors, sweeteners or flavors',
@@ -96,5 +96,4 @@ export const products:product[] = [
 ]
 
 localStorage.setItem('productList',JSON.stringify(products))
-
 export const productz = JSON.parse(localStorage.getItem('productList')||'{}') || products
